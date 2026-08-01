@@ -2,7 +2,6 @@ package validate
 
 import (
 	"database/sql"
-	"net/http"
 
 	"github.com/ViitoJooj/go-sdk/validate/addresses"
 	"github.com/ViitoJooj/go-sdk/validate/company"
@@ -32,10 +31,8 @@ func District(district string) error       { return addresses.District(district)
 func City(city string) error               { return addresses.City(city) }
 func StateRegion(stateRegion string) error { return addresses.StateRegion(stateRegion) }
 
-func CNPJ(cnpj string) error                              { return company.CNPJ(cnpj) }
-func CNPJWithBrasilAPI(cnpj string) error                  { return company.CNPJWithBrasilAPI(cnpj) }
-func CNPJWithBrasilAPIClient(cnpj string, c *http.Client) error { return company.CNPJWithBrasilAPIClient(cnpj, c) }
-func CorporateName(corporateName string) error            { return company.CorporateName(corporateName) }
+func CNPJ(cnpj string) error                   { return company.CNPJ(cnpj) }
+func CorporateName(corporateName string) error { return company.CorporateName(corporateName) }
 func TradeName(tradeName string) error         { return company.TradeName(tradeName) }
 func IM(im string) error                       { return company.IM(im) }
 func IE(ie string) error                       { return company.IE(ie) }
