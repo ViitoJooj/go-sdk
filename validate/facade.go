@@ -12,6 +12,7 @@ import (
 	"github.com/google/uuid"
 )
 
+// User - data validate
 func Email(email string) error         { return users.Email(email) }
 func Password(password string) error   { return users.Password(password) }
 func Username(username string) error   { return users.Username(username) }
@@ -21,6 +22,7 @@ func LastName(lastName string) error   { return users.LastName(lastName) }
 func Phone(phone string) error         { return users.Phone(phone) }
 func CPF(cpf string) error             { return users.CPF(cpf) }
 
+// Address - data validate
 func Country(country string) error         { return addresses.Country(country) }
 func PostalCode(postalCode string) error   { return addresses.PostalCode(postalCode) }
 func CEP(cep string) error                 { return addresses.CEP(cep) }
@@ -34,6 +36,7 @@ func District(district string) error       { return addresses.District(district)
 func City(city string) error               { return addresses.City(city) }
 func StateRegion(stateRegion string) error { return addresses.StateRegion(stateRegion) }
 
+// Company - data validate
 func CNPJ(cnpj string) error                   { return company.CNPJ(cnpj) }
 func CorporateName(corporateName string) error { return company.CorporateName(corporateName) }
 func TradeName(tradeName string) error         { return company.TradeName(tradeName) }
@@ -41,16 +44,19 @@ func IM(im string) error                       { return company.IM(im) }
 func IE(ie string) error                       { return company.IE(ie) }
 func CNAE(cnae string) error                   { return company.CNAE(cnae) }
 
+// Network - data validate
 func URL(url string) error           { return networks.URL(url) }
 func Domain(domain string) error     { return networks.Domain(domain) }
 func Ipv4(ip string) error           { return networks.Ipv4(ip) }
 func Ipv6(ip string) error           { return networks.Ipv6(ip) }
 func Hostname(hostname string) error { return networks.Hostname(hostname) }
 
+// Finance - data validate
 func PixKey(key string) error { return finance.PixKey(key) }
 func IBAN(iban string) error  { return finance.IBAN(iban) }
 func Swift(code string) error { return finance.Swift(code) }
 
+// IDs - data validate
 func IntID(id int, table string, conn *sql.DB) error      { return ids.IntID(id, table, conn) }
 func StrID(id string, table string, conn *sql.DB) error   { return ids.StrID(id, table, conn) }
 func UUID(id uuid.UUID, table string, conn *sql.DB) error { return ids.UUID(id, table, conn) }
