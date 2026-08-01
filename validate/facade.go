@@ -23,6 +23,9 @@ func CPF(cpf string) error             { return users.CPF(cpf) }
 
 func Country(country string) error         { return addresses.Country(country) }
 func PostalCode(postalCode string) error   { return addresses.PostalCode(postalCode) }
+func CEP(cep string) error                 { return addresses.CEP(cep) }
+func CEPv2(cep string) error               { return addresses.CEPv2(cep) }
+func DDD(ddd string) error                 { return addresses.DDD(ddd) }
 func Label(label string) error             { return addresses.Label(label) }
 func Street(street string) error           { return addresses.Street(street) }
 func HouseNumber(houseNumber string) error { return addresses.HouseNumber(houseNumber) }
